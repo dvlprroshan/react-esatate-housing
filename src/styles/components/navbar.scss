@@ -1,0 +1,49 @@
+@use "../helpers/colors.scss" as color;
+@use "../helpers/" as *;
+
+
+.navbar {
+    @include box(70px,100%);
+    padding:20px 40px;
+    @include flex(null); 
+    position: absolute;
+    
+    // brand main logo
+    .brand_logo {
+        @include box(38px,220px, url("/assets/images/brand_logo_light.png")); 
+        background-size: contain;
+        min-width: 220px;
+        background-repeat: no-repeat;
+    }
+    // menu links
+    .menu_links{
+        @include box(null,100%);
+        list-style: none;
+        @include flex(null,center,center,null,20px);
+
+        li a{
+            font-size:1rem;
+            font-weight: bold;
+            color: #fff;
+        }
+    }
+    // right btn
+    .right_btn{
+        @include box(40px,max-content);
+        @include flex(null,center,null,null,20px);
+        font-weight:bold;
+        
+        .login{
+           color:white;
+        }
+        .add_properties{
+            padding:5px;
+            background:color.$primary;
+            color:white;
+            @include flex(null,center,null,null,10px);
+            padding:8px 20px;   
+            border-radius:5px;
+        }
+    }
+
+}

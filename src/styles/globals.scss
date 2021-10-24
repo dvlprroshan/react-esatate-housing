@@ -1,0 +1,17 @@
+// sass utils function, mixin, variables, etc.
+@use './helpers';
+
+// basic styling like typo, reset styling
+@use './basics';
+
+// similar component styling
+@use './components';
+
+// layout style
+@use './layout';
+
+// differnt routes.
+@use './pages';
+
+// some other helper sass or sass library.
+@use './tools';

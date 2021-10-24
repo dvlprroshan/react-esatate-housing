@@ -1,0 +1,22 @@
+@use '../../helpers' as *;
+.home_topSection{
+    @include box(105vh,100%, url("/assets/images/background-top-section-home.png"));
+    padding:80px 40px;
+
+    .down_wave{
+        @include box(75px,100%, url("/assets/images/vector/vector_wave_white.png"));
+        position:absolute;
+        transform:translate(-40px,calc(5vh + 1px));
+        margin:auto;
+        bottom:0;
+        animation: wave_animate 50s ease infinite ;
+        &::before{
+            position:absolute;
+            content:'';
+            @include box(95px,100%, url("/assets/images/vector/vector_wave_white2.png"));
+            transform:translateY(-10px);
+            animation: wave_animate 50s ease infinite reverse;
+
+        }
+    }
+}
