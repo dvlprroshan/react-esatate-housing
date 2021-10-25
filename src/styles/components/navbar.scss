@@ -4,8 +4,8 @@
 
 .navbar {
     @include box(70px,100%);
-    padding:20px 40px;
     @include flex(null); 
+    padding:20px 40px;
     position: absolute;
     
     // brand main logo

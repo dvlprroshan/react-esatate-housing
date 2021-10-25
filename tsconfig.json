@@ -14,11 +14,8 @@
       "@/com_p/*": [
         "components/pages/*"
       ],
-      "@/images/*": [
-        "assets/images/*"
-      ],
-      "@/icons/*": [
-        "assets/icons/*"
+      "@/hooks/*": [
+        "utils/hooks/*"
       ],
       "@/helpers/*": [
         "utils/helpers/*"

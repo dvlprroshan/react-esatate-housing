@@ -1,6 +1,6 @@
 import { capitalize } from "@/helpers/string";
-import { UIEvent, useEffect, useState } from "react";
 import { FaPlus } from "react-icons/fa";
+import useWindowScrollPosition from "@/hooks/useWindowScrollPosition";
 
 // navbar available menu items
 export type NavbarAvailMenu =
@@ -25,9 +25,9 @@ const Navbar = ({ activePageMenu }: NavbarProps): JSX.Element => {
     "properties",
     "search",
   ];
-  const [isTopAttached, setIsTopAttacted] = useState<boolean>(false);
+  // const [isTopAttached, setIsTopAttacted] = useState<boolean>(false);
   // returning main navbar structure
-
+  const winSrollPos = useWindowScrollPosition();
   // use browser api
   typeof window !== "undefined"
     ? (($: Window) => {
@@ -36,7 +36,7 @@ const Navbar = ({ activePageMenu }: NavbarProps): JSX.Element => {
     : 0;
 
   return (
-    <div className={`navbar ${isTopAttached ? "topAttached" : ""}`}>
+    <div className={`navbar ${winSrollPos > 60 ? "topAttached" : ""}`}>
       <div className="brand_logo"></div>
       <ul className="menu_links">
         {MenuItem.map(
