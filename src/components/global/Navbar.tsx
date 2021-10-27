@@ -25,23 +25,20 @@ const Navbar = ({ activePageMenu }: NavbarProps): JSX.Element => {
     "properties",
     "search",
   ];
-  // const [isTopAttached, setIsTopAttacted] = useState<boolean>(false);
+
   // returning main navbar structure
   const winSrollPos = useWindowScrollPosition();
-  // use browser api
-  typeof window !== "undefined"
-    ? (($: Window) => {
-        $.addEventListener("scroll", (e: Event) => {});
-      })(window)
-    : 0;
 
   return (
     <div className={`navbar ${winSrollPos > 60 ? "topAttached" : ""}`}>
       <div className="brand_logo"></div>
       <ul className="menu_links">
         {MenuItem.map(
-          (elm: string): JSX.Element => (
-            <li key={elm} className={`elm===activePageMenu?:"ds":""}`}>
+          (elm: NavbarAvailMenu): JSX.Element => (
+            <li
+              key={elm}
+              className={`${elm === activePageMenu ? "activeMenuItem" : ""}`}
+            >
               <a href={`/${elm}`}> {capitalize(elm)}</a>
             </li>
           )

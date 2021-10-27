@@ -32,3 +32,21 @@
     column-gap: $col;
   }
 }
+
+
+@mixin margin-auto($right:null,$left:null,$top:null,$bottom:null){
+  margin:auto;
+  @if $left{
+    left:$left;
+  }
+  @if right {
+   right:$right;
+  }
+  @if top {
+    top:$top;
+  }
+  @if bottom{
+    bottom:$bottom;
+  }
+}
+
