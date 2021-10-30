@@ -1,0 +1,112 @@
+@use "../../helpers" as *;
+
+.section5 {
+  padding-top: 50px;
+  position: relative;
+  .slider {
+    @include box(400px, 80%);
+    position: relative;
+    margin: auto;
+    left: 0;
+    right: 0;
+    margin-top: 50px;
+    display: flex;
+    overflow: hidden;
+  }
+  .slide {
+    min-height: 100%;
+    min-width: 100%;
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    // border:2px solid black;
+    // padding:50px 10%;
+    // border:50px solid transparent;
+    // padding-right:50px;
+    // background-color: $black;
+    position:relative;
+    // border-bottom:2px solid $black;
+    .quote{
+        display:flex;
+        position:absolute;
+        width:80%;
+        height:60%;
+        justify-content:space-between;
+        margin:0 10%;
+        // background-color:red;   
+    }
+    .review{
+        position:absolute;
+        height:100%;
+        align-items: center;
+        width:calc(100% - 220px);
+        margin:auto;
+        left:0;right:0;
+        display:flex;
+        text-align: center;
+        font-size:30px;
+        font-weight:bolder;
+        color:$secondary;
+        font-style: italic;
+        // font-family: 'Sora';
+        // background-color:blue;
+        // justify-content:center;
+        // top:0;
+        // bottom:0;
+        
+    }
+    .bottom-quote{
+        transform:rotate(180deg) translate(10px);
+        align-self:flex-end;
+        // bottom:0;
+        // right:0;
+    }
+    .bottom-quote,.upper-quote{
+        @include box(100px,100px);
+        color:$primary;
+        // position:absolute;
+    }
+    .rating{
+        width:100%;
+        display:flex;
+        justify-content:center;
+        margin-top:260px;
+        .icons{
+            @include box(40px);
+            color:$primary;
+        }
+    }
+    .name{
+        text-align:center;
+        // font-family: 'L';
+        font-weight:700;
+        font-size:33px;
+        color:$darken;
+        margin-top:10px;
+    }
+    .desc{
+        text-align: center;
+        font-size:20px;
+        font-style: italic;
+        color:$secondary
+    }
+  }
+  .navigator{
+      width: 100%;
+      display:flex;
+        justify-content:center;
+        column-gap: 10px;   
+        .nav-item{
+            @include box(20px);
+            background-color:$lightblue;
+            border-radius: 50%;
+            // margin:0 10px;
+            cursor:pointer;
+            &:hover{
+                color:$secondary;
+            }
+        }
+        .active{
+            background-color:$secondary;
+        }
+  }
+
+}

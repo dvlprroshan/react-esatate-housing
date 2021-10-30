@@ -1,4 +1,4 @@
-@use 'sass:list';
+@use "sass:list";
 
 // for creating boxes.
 @mixin box($args...) {
@@ -33,20 +33,33 @@
   }
 }
 
-
-@mixin margin-auto($right:null,$left:null,$top:null,$bottom:null){
-  margin:auto;
-  @if $left{
-    left:$left;
+@mixin margin-auto($right: null, $left: null, $top: null, $bottom: null) {
+  margin: auto;
+  @if $left {
+    left: $left;
   }
   @if right {
-   right:$right;
+    right: $right;
   }
   @if top {
-    top:$top;
+    top: $top;
   }
-  @if bottom{
-    bottom:$bottom;
+  @if bottom {
+    bottom: $bottom;
   }
 }
 
+@mixin add_btn_glow_effect() {
+  &::after {
+    content: "";
+    position: absolute;
+    transform: translateX(-100%);
+    border-radius: 30px;
+    transition: all 1s ease-in-out;
+    @include box(100%, 100%, white);
+  }
+  &:hover::after {
+    transform: translateX(-10%);
+    opacity: 0;
+  }
+}

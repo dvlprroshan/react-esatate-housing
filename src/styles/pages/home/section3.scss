@@ -1,0 +1,127 @@
+// section 3 style of home page
+@use "../../helpers/colors.scss";
+@use "../../helpers/mixin.scss" as *;
+@use "sass:color" as *;
+
+.section3 {
+  padding-top: 50px;
+  .card-con {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    row-gap: 50px;
+    justify-content: space-evenly;
+  }
+  .card {
+    position: relative;
+    transition: all 0.5s linear;
+    @include box(310px, 380px);
+    border-radius: 20px;
+    overflow: hidden;
+    border-bottom: 5px solid colors.$primary;
+
+    .inner {
+      @include box(
+        100%,
+        100%,
+        linear-gradient(
+          to bottom,
+          transparent,
+          adjust(colors.$darken, $alpha: -0.05)
+        )
+      );
+      padding: 10px;
+    }
+    .card-label {
+      color: white;
+      padding: 5px 10px;
+      width: fit-content;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .card-label.red {
+      background: colors.$danger;
+    }
+    .card-label.blue {
+      background: colors.$primary;
+    }
+    .card-details-info {
+      @include box(140px, 100%);
+      position: absolute;
+      margin: auto;
+      bottom: 0;
+      color: white;
+      margin-bottom: -50px;
+      transition: all 0.5s linear;
+    }
+    .card-title {
+      font-size: 27px;
+      letter-spacing: -1px;
+      padding-right: 10px;
+    }
+    .card-price {
+      font-size: 30px;
+      font-weight: lighter;
+      color: colors.$secondary;
+      margin-top: 5px;
+      letter-spacing: -1px;
+    }
+    .card-details {
+      @include box(65px, 100%);
+      display: flex;
+      align-items: center;
+      column-gap: 7px;
+      .icons {
+        color: colors.$primary;
+        @include box(25px);
+      }
+      .bar {
+        @include box(20px, 2px, colors.$secondary);
+        border-radius: 2px;
+      }
+    }
+    &:hover .card-details-info {
+      margin-bottom: 0px;
+    }
+    &:hover {
+      transform: scaleX(1.05) scaleY(1.05);
+      animation: scale-in 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes scale-in {
+      from {
+        background-size: 100% 100%;
+      }
+      to {
+        background-size: 150% 150%;
+      }
+    }
+  }
+  .view-all {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    a.btn-view-all {
+      background: colors.$primary;
+      padding: 10px 15px;
+      font-size: 30px;
+      // text-transform: uppercase;
+      column-gap: 10px;
+      font-weight: bold;
+      border-radius: 10px;
+      display: flex;
+      width: fit-content;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      position: relative;
+      overflow: hidden;
+      @include add_btn_glow_effect;
+    }
+    .icon {
+      color: white;
+    }
+  }
+}

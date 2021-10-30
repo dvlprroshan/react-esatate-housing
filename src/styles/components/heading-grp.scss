@@ -1,0 +1,36 @@
+@use '../helpers/colors.scss';
+@use 'sass:color' as *;
+
+.heading-grp{
+    position:relative;
+    text-align: center;
+    width:100%;
+    h1{
+        font-family: 'Bebas Neue';
+        letter-spacing: 2px;
+        font-size: 34px;
+        color:adjust(colors.$secondary,$lightness:-20);
+        &::after,&::before{
+            content:"";
+            position:absolute;
+            width:300px;
+            height:20px;
+            margin-top:10px;
+            background:url('/assets/images/vector/heading-art.png');
+            background-position: right;
+            background-repeat: no-repeat;
+            background-size:150px 18px ;
+        }
+        &::before{
+            transform:translateX(-105%)
+        }
+        &::after{
+            transform:rotate(180deg) translateX(-5%)
+        }
+    }
+    h3{
+        color:colors.$secondary;
+        font-style:italic;
+        font-weight: 400;
+    }
+}

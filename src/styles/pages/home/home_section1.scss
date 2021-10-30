@@ -29,9 +29,9 @@
     .slider_navigator{
         @include flex(null,null,space-between);
         @include box(100px,100%);
+        @include margin-auto(null,null,0,0);
         transform:translateX(-$horizoltalPadding);
         position:absolute;
-        @include margin-auto(null,null,0,0);
 
         div[class*="btn-"]{
             @include box(100px,45px,color.$darken);
@@ -103,11 +103,17 @@
             font-weight: bold;
             font-size:20px;
             cursor:pointer;
+            position:relative;
+            overflow:hidden;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            @include add_btn_glow_effect;
         }
         .guidedText{
+            @include margin-auto(null,null,null,0);
             @include box(40px,100%);
             position:absolute;
-            @include margin-auto(null,null,null,0);
             font-weight:bold;
             color:color.$secondary;
             padding-left:30px;
