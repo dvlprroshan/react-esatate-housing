@@ -9,7 +9,7 @@
         font-family: 'Bebas Neue';
         letter-spacing: 2px;
         font-size: 34px;
-        color:adjust(colors.$secondary,$lightness:-20);
+        color:adjust(colors.$secondary,$lightness:-20%);
         &::after,&::before{
             content:"";
             position:absolute;
