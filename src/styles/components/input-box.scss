@@ -1,0 +1,50 @@
+@use '../helpers' as *;
+@use 'sass:color' as *;
+
+.input-box{
+    position: relative;
+    padding:5px;
+    width:100%;
+    margin:5px;
+    input{
+        background-color: transparent ;
+        border:2px solid $primary;
+        width:100%;
+        padding:10px 20px;
+        font-size:18px;
+        border-radius: 10px;
+        color:$secondary;
+        
+    }
+    input:focus{
+        outline:none;
+        border:2px solid adjust($primary,$lightness:-20%);
+    }
+    input:focus + span{
+        transform: translateY(-23px);
+        color:$primary;
+        z-index:1;
+        // top:0;
+        // font-weight: bold;
+        // bottom:unset;
+        // color:red;
+    }
+    span{
+        position: absolute;
+        margin:auto;
+        // top:10px;
+        left:20px;
+        font-style:italic;
+        top:0;
+        bottom:0;
+        padding:0 10px;
+        height:min-content;
+        z-index:-1;
+        font-size:20px;
+        line-height: 20px;
+        transition:all .2s linear;
+        color:$secondary;
+        background-color:white;
+    }
+
+}

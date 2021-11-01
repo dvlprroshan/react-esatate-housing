@@ -4,7 +4,9 @@
   padding-top: 50px;
   position: relative;
   .slider {
-    @include box(400px, 80%);
+    // @include box(400px, 1100px);
+    height:400px;
+    max-width:1100px;
     position: relative;
     margin: auto;
     left: 0;

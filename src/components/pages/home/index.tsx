@@ -6,6 +6,9 @@ import Section3 from "./Section3";
 import Section4 from "./Section4";
 import Section5 from "./Section5";
 import Section6 from "./Section6";
+import Section7 from "./Section7";
+import Fotter from "@/com_g/Fotter";
+
 const Home = () => (
   <React.Fragment>
     <Navbar activePageMenu="home" />
@@ -15,31 +18,8 @@ const Home = () => (
     <Section4 />
     <Section5 />
     <Section6 />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+    <Section7 />
+    <Fotter />
   </React.Fragment>
 );
 export default Home;

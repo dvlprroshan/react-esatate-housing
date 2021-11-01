@@ -1,0 +1,7 @@
+@use "../helpers" as *;
+
+.fotter{
+    // color:$primary;
+    @include box(460px, 100%,$darken);
+    position:relative;
+}

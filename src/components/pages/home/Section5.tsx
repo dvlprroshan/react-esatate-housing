@@ -78,7 +78,7 @@ const Section5 = () => {
 
     useTimeInterval((e: any) => {
         handleNextSlide();
-    }, 5000);
+    }, 8000);
 
     return (
         <div className="section5">

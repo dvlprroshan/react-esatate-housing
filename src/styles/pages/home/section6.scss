@@ -1,5 +1,86 @@
 // section 6 of home page
-@use '../../helpers' as *;
-.section-6{
-color:$primary;
+@use "../../helpers" as *;
+.section-6 {
+  //   @include box(850px,100%,$skyblue);
+  @include box(auto, 100%, $lightblue);
+  margin-top: 50px;
+  padding: 30px;
+  .main-con {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    justify-content: space-evenly;
+  }
+  .card{
+      @include box(300px,250px);
+      @include flex(column,center,center);
+      text-align: center;
+      position:relative;
+      cursor:pointer;
+      .card-img{
+          transition:all .5s ease;
+      }
+      .card-content{
+          @include add_btn_glow_effect($primary);
+          background:$primary;
+          &::after{
+              transform:translate(-150%,10%);
+              @include box(200px,200px,white);
+              border-radius:50%;
+
+          }
+          &:hover::after{
+                transform:translate(0,-120%);
+                background-color:$primary;
+          }
+        //   @include box(100%);
+        overflow:hidden;
+
+        color:white;
+        // font-size: 30px;
+        border-radius: 15px;
+        .card-title{
+            font-size: 30px;
+            font-weight: bold;
+        }
+        padding:10px 0;
+        position:absolute;
+        bottom:10px;
+        border:5px solid white;
+        width:99%;
+    }
+    &:hover .card-img{
+        transform:scale(1.3);
+    }
+    &:hover .card-content{
+        background:white;
+        .card-title{
+            color:$darken;
+        }
+        .card-dec{
+            color:$secondary;
+        }
+          color:$primary;
+      }
+    }
+    .view-all{
+        // row-gap:20px;
+        .icon{
+            @include box(120px,120px,white);
+            padding:20px;
+            border-radius:50%;
+        }
+        color:$darken;
+        .text{
+            font-size: 25px;
+            font-weight: bold;
+            // margin-top:10px;
+            transform:translateY(20px);
+
+        }
+        // @include box(200px,200px,red);
+        // color:red;
+      //   background-color:red;
+    }
 }

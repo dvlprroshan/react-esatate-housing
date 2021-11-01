@@ -5,7 +5,7 @@ const Section2 = () => {
     const cardsData = [
         {
             title: "Buying a Home",
-            link: "#",
+            link: "#",  
             image: "/assets/images/section2-card/1.png",
         },
         {

@@ -49,14 +49,18 @@
   }
 }
 
-@mixin add_btn_glow_effect() {
+@mixin add_btn_glow_effect($color:null) {
   &::after {
     content: "";
     position: absolute;
     transform: translateX(-100%);
     border-radius: 30px;
     transition: all 1s ease-in-out;
-    @include box(100%, 100%, white);
+    @if $color {
+      @include box(100%, 100%, $color);
+    }@else {
+      @include box(100%, 100%, white);
+    }
   }
   &:hover::after {
     transform: translateX(-10%);

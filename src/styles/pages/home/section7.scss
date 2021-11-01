@@ -1,0 +1,90 @@
+@use "../../helpers" as *;
+
+.section-7 {
+  padding-top: 50px;
+  @include box(600px, 100%);
+  overflow: hidden;
+  .main {
+    @include box(100%);
+    display: flex;
+  }
+  .img-con {
+    width: 50%;
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:80%;
+    .text {
+      font-weight: bold;
+      font-family: "Bebas Neue";
+      letter-spacing: 3px;
+      font-size: 3rem;
+      color: $primary;
+      background: linear-gradient(to bottom, $skyblue 10%, $primary 90%);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-attachment: fixed;
+      text-align: center;
+      padding: 0px;
+      margin: 0px;
+    }
+
+    img {
+      background: linear-gradient(to bottom, $skyblue 10%, $primary 90%);
+      background-attachment: fixed;
+      @include box(300px);
+    }
+  }
+  .form {
+    width: 50%;
+    padding:30px;
+    padding:50px 100px;
+    min-width: 400px;
+    // background-color:$lightblue;
+    @include flex(column,null,null,20px);
+    .name{
+        display:flex;
+        justify-content: space-between  ;
+    }
+    .check-box-license{
+        padding:0 20px;
+        display:flex;
+        input.checkbox{
+            @include box(30px);
+           
+        }
+        span{
+            color:$secondary;
+            opacity:.7;
+            font-style: italic;
+            padding-left: 20px;
+            display:block;
+        }
+        span a{
+            font-weight: bold;
+            color:$primary;
+        }
+    }
+  }
+  input.submit{
+    padding:10px 10px;
+    width:fit-content;
+    background: linear-gradient(to bottom, $skyblue 10%, $primary 90%);
+    background-attachment: fixed;
+    color:$lightblue;
+    margin-left:20px;
+    font-weight: bold;
+    font-family: 'Sora';
+    font-size: 1.5rem;
+    border:none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline:none;
+    &:hover{
+        background: linear-gradient(to left, $primary 10%, $skyblue 90%);
+        color:$lightblue;
+    }
+  }
+}
