@@ -3,10 +3,6 @@
 import HeadingGrp from "@/com_g/HeadingGrp";
 import InputBox from "@/com_g/InputBox";
 import useForm from "@/hooks/useForm";
-// import { useState } from 'react';
-// import { GiConsoleController } from "react-icons/gi";
-
-
 
 type formDataType = {
     phone: string;
@@ -22,15 +18,6 @@ const Section7 = () => {
         email: "",
         phone: "",
     });
-    // console.log(formData);
-
-    // const saveInputValue = (e: any) => {
-    //     setFormData({
-    //         ...formData,
-    //         [e.target.name]: e.target.value,
-    //     });
-    // }
-    // console.log(formData);
     return (
         <div className="section-7">
             <HeadingGrp

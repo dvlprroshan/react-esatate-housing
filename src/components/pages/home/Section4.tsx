@@ -12,9 +12,6 @@ const Section4 = () => {
             />
             <div className="main-content">
                 <div className="animated-img">
-                    {/* <div className="vector-bg-1"></div> */}
-                    {/* <div className="vector-bg-2"></div> */}
-                    {/* <div className="vector-bg-3"></div> */}
                     <div className="main-img"></div>
                 </div>
                 <div className="content">

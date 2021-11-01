@@ -2,7 +2,6 @@
 @use "../../helpers/colors.scss" as *;
 @use 'sass:color' as *;
 .section4 { 
-  // border-bottom: 1px solid red;
   position:relative;
   @include box(
     950px,
@@ -17,7 +16,6 @@
     display:flex;
     width: 100%;
     .animated-img {
-      // margin-top: 40px;
       position: relative;
       z-index:2;
       div {
@@ -26,42 +24,13 @@
       @include box(950px, 500px);
       .main-img {
         @include box(90%);
-        // margin-top: 30px;
         background: url("/assets/images/vector/section4-main-img.png") no-repeat;
         background-size: 120%;
         background-position: left;
       }
-      // div[class*='vector-bg-']{
-      //   @include box(900px,950px);
-      //   transform:translateX(-48%);
-      //   background-size: 100% 100%;
-      //   opacity:.8;
-      //   @keyframes rotate{
-      //     from{
-      //       transform:translateX(-50%) rotate(0deg) scale(.97);
-      //     }
-      //     to{
-      //       transform:translateX(-50%) rotate(360deg) scale(.95);
-      //     }
-      //   }
-      // }
-      // .vector-bg-1{
-      //   animation:rotate 30s ease-in infinite alternate;
-      //   background: url("/assets/images/vector/section4-1.png") no-repeat;
-      // }
-      // .vector-bg-2{
-      //   animation:rotate 40s alternate ease infinite;
-      //   background: url("/assets/images/vector/section4-2.png") no-repeat;
-      // }
-      // .vector-bg-3{
-      //   animation:rotate alternate 60s linear infinite;
-      //   background: url("/assets/images/vector/section4-3.png") no-repeat;
-      // }
     }
   }
   .content{
-    // height:700px;
-    // width:100%;
     z-index:-2;
     position: absolute;
     padding-top:50px;
@@ -70,7 +39,6 @@
     div[class*="card-"]{
       max-width:500px;
       background:adjust($black,$alpha:-.9);
-      // transition:all .5s linear;
       padding:10px 30px;
       border-radius: 10px;
       color:$darken;
@@ -79,7 +47,6 @@
       &:hover{
         background:$primary;
         color:white;
-        // text-align: left;
         border:2px solid white;
         
       }
@@ -88,12 +55,9 @@
         font-weight: bolder;
         font-family: 'Bebas Neue';
         letter-spacing: 2px;
-        // color:adjust($darken,$alpha:-.3);
       }
       .dec{
         font-family: 'Sora';
-        // color:white;
-        // font-style: italic;
         margin-top:10px;
       }
     }
@@ -117,17 +81,8 @@
     top:0;
     bottom:0;
     @include box(300px);
-    // width: 200px;
-    // height: 200px;
-    // background-color:$primary;
-    // border-radius: 82% 18% 84% 16% / 88% 3% 97% 12% ;
     color:$primary;
-    // stroke: url("#blue-gradient");
-    // background: url("#blue-gradient");
     transform:translateY(100px) rotate(180deg);
-    // filter:drop-shadow(0 0 10px $secondary);
-    // filter:drop-shadow(0 0  5px $darken);
-    // z-index:-200;
 
   }
 }

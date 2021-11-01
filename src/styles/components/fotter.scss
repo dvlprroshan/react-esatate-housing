@@ -1,7 +1,67 @@
 @use "../helpers" as *;
 
 .fotter{
-    // color:$primary;
     @include box(460px, 100%,$darken);
     position:relative;
+    @include flex(column,null,space-between);
+    color:white;
+    padding:0 20px;
+    .main{
+        @include box(400px,100%);
+        @include flex();
+        .left{
+            width:50%;
+            padding:5%;
+            .brand-desc{
+                font-size:25px;
+                color:$secondary;
+                font-style: italic;
+                margin-top:10px;
+            }
+        }
+        ul.menu{
+            list-style: none;
+            margin-top:35px;
+            li a{
+                color:white;
+                font-weight: bold;
+                font-size: 20px;
+                list-style: 30px;
+            }
+            li{
+             height:30px;   
+            }
+        }
+
+        .right{
+            width:50%;
+            padding:5%;
+            text-align: center;
+            .title{
+                font-size:28px;
+                font-weight: bold;
+            }
+            .text{
+                font-size:20px;
+                margin-bottom:25px;
+                // font-weight: ;
+                font-style: italic;
+                color:$lightblue;
+            }
+            .title:nth-last-child(1){
+                margin-top:20px;
+            }
+            .social-icons{
+                width:100%;
+                margin-top:20px;
+                @include flex(null,center,center,null,20px);
+
+            }
+        }
+    }
+    .copyright{
+        text-align: center;
+        font-size:18px;
+        margin-bottom:10px;
+    }
 }
