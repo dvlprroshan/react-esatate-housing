@@ -21,7 +21,7 @@ const InputBox = ({
         <div className={`input-box ${className}`}>
             <style jsx>{`
         span {
-            ${value.trim() === "" ? "" : "transform: translateY(-23px);color:#61E8D3;z-index:1;"}
+            ${value.trim() === "" ? "" : "transform: translateY(-23px);color:#4e6efa;z-index:1;"}
         }
       `}</style>
             <input

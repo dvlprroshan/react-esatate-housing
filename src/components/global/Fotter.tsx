@@ -8,7 +8,7 @@ const Fotter = (): JSX.Element => {
                     <img src="/assets/images/brand_logo_light2.png" alt="" />
                 </div>
                 <div className="brand-desc">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry{"'"}s standard dummy
                 </div>
                 <ul className="menu">
                     <li><a href="#">Properties</a></li>
@@ -33,7 +33,7 @@ const Fotter = (): JSX.Element => {
                 </div>
             </div>
         </div>
-        <div className="copyright">© 2021 Finderland. All right reserved</div>
+        <div className="copyright">© 2021 HousingWeb. All right reserved</div>
     </div>
 }
 

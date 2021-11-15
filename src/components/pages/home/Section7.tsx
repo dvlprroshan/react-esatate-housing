@@ -40,7 +40,7 @@ const Section7 = () => {
                         <input type="checkbox" className="checkbox" name="license" />
                         <span>
 
-                            Lorem Ipsum is simply dummy text of the printing and typesetting <a href="#">Privacy & Policy.</a>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting <a href="#">Privacy & Policy.</a>>
                         </span>
                     </div>
                     <input type="submit" value="GET CALLBACK" className="submit" />

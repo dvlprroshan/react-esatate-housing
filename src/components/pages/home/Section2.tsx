@@ -38,7 +38,7 @@ const Section2 = () => {
 
             <div className="card-con">
                 {cardsData.map((card, index) => (
-                    <a className="card" href={card.link} key={index}>
+                    <a className= "card" href = { card.link } key = { index } >
                         <div className="card-img">
                             <img src={card.image} alt="" />
                         </div>

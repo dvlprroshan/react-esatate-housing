@@ -1,8 +1,9 @@
 import HeadingGrp from "@/com_g/HeadingGrp";
-import { GiRocket } from "react-icons/gi";
+import { IoRocket } from 'react-icons/io5';
 
 // why choose us section
 const Section4 = () => {
+
     return (
         <div className="section4">
             <br />
@@ -40,12 +41,14 @@ const Section4 = () => {
                         <div className="title">BUYING STRATEGIES</div>
                         <div className="dec">
                             We use modern technology along with our market knowledge,
-                            unsurpassed negotiation and sales skills, professional experience{" "}
+                            unsurpassed negotiation and sasles skills, professional experience{" "}
                         </div>
                     </div>
                 </div>
+                <div className="rocket">
+                    <IoRocket className="vector-icon" style={{ stroke: "url(#blue-gradient)" }} />
 
-                <GiRocket className="vector-icon" style={{ stroke: "url(#blue-gradient)" }} />
+                </div>
 
             </div>
         </div>

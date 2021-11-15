@@ -30,7 +30,7 @@ const Navbar = ({ activePageMenu }: NavbarProps): JSX.Element => {
   const winSrollPos = useWindowScrollPosition();
 
   return (
-    <div className={`navbar ${winSrollPos > 60 ? "topAttached" : ""}`}>
+    <div className={`navbar ${winSrollPos > 60 || activePageMenu !== "home" ? "topAttached" : ""}`}>
       <div className="brand_logo"></div>
       <ul className="menu_links">
         {MenuItem.map(

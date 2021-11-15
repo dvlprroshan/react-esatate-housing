@@ -52,7 +52,7 @@ const ThirdSectionCard = ({
                     </div>
                 </div>
             </div>
-        </a>
+        </a> 
     );
 };
 

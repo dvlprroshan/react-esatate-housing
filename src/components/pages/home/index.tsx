@@ -11,6 +11,7 @@ import Fotter from "@/com_g/Fotter";
 
 const Home = () => (
   <React.Fragment>
+    <div id="topmost"></div>
     <Navbar activePageMenu="home" />
     <HomeTopSection />
     <Section2 />

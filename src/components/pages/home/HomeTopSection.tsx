@@ -2,95 +2,10 @@ import useWindowScrollPosition from "@/hooks/useWindowScrollPosition";
 import { TiChevronRight } from "react-icons/ti";
 import { useState } from "react";
 import useTimeInterval from "@/hooks/useTimeInterval";
-import Select from "react-select";
-import { capitalize } from "@/helpers/string";
+import SearchPanel from "@/com_g/SearchPanel";
+
 
 // search box with loaded functionality
-const SearchPanel = () => {
-  // options types for search to select field
-  type dropdownItemsType = {
-    city: typeof dropdownItems.city[number];
-    type: typeof dropdownItems.type[number];
-    status: typeof dropdownItems.status[number];
-  };
-
-  // data of filters for search
-  const dropdownItems = {
-    // ** first value of all properties is default value.
-    // ! readonly data
-
-    // vaild cities:
-    city: ["All", "Delhi", "Mumbai", "Patna", "Jaipur"] as const,
-
-    // valid properties type:
-    type: [
-      "All",
-      "Appartment",
-      "Office Space",
-      "Sky Villa",
-      "Farm House",
-    ] as const,
-
-    // valid properties status:
-    status: ["All", "Rent", "Buy", "Advance Booking"] as const,
-  };
-
-  // initialize state for form values with default value
-  const [selectedValue, setSelectedValue] = useState<dropdownItemsType>({
-    city: dropdownItems.city[0],
-    type: dropdownItems.type[0],
-    status: dropdownItems.status[0],
-  });
-
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
-    console.log(selectedValue);
-  };
-
-  // returning form elements
-  return (
-    <form className="properties_search" method="post">
-      <div className="firstCon">
-        {/* print all selection boxes with requird props */}
-        {Object.entries(dropdownItems).map(
-          (item): React.ReactElement => (
-            <Select
-              // key, intanceId both are for unique ID
-              key={`key-${item[0]}`}
-              instanceId={`id-${item[0]}`}
-              // element name helps in targeting data in post request.
-              name={item[0]}
-              className="inputSelect"
-              placeholder={`Select ${capitalize(item[0])}:`}
-              // all vaild options for items
-              options={item[1].map((e: any) => ({
-                value: e,
-                label: e,
-              }))}
-              // set data to component state when data changes
-              onChange={(e: any) =>
-                setSelectedValue({ ...selectedValue, [item[0]]: e.value })
-              }
-            />
-          )
-        )}
-      </div>
-      {/* this element is just for styling with own way */}
-      <div className="secondCon">
-        <button type="submit" onClick={handleSubmit} className="btn-search">
-          Find Properties
-        </button>
-      </div>
-
-      {/* short text */}
-      <div className="guidedText">
-        Select Your Prefered City, Properties Type, and status then Click the
-        search box
-      </div>
-    </form>
-  );
-};
-
 // Main component
 const HomeTopSection = (): React.ReactElement => {
   // use custom hook to get position of scrollbars.

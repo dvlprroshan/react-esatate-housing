@@ -1,0 +1,59 @@
+@use '../../helpers' as *;
+@use 'sass:color' as *;;
+
+
+
+.search-main{
+    min-height:100vh;
+    background-color: $lightblue;
+    // position: relative;
+
+    padding-top: 100px;
+    h1.heading{
+        font-size: 3.5rem;
+        text-align: center;
+        color:adjust($darken,$lightness: 10%);
+    }
+    form{
+        margin-top:150px;
+    }
+    .divider{
+        @include flex(null);       
+        margin-top:250px;
+        padding:40px;
+    }
+    .filter-nav{
+        min-width: 350px;
+        height:100%;
+    }
+    .nav-card{
+        background-color: white;
+        margin-bottom: 20px;
+        padding:25px;
+        border-radius: 20px;
+        .card-title{
+            font-size:23px;
+            color:$darken;
+            font-weight: bold;
+        }
+        .card-list{
+            list-style: none;
+            margin-top: 20px    ;
+        }
+        .card-item{
+            color:$secondary;
+            font-size: 20px;
+            margin-top:10px;
+            width:fit-content;
+            cursor: pointer;
+            padding-left:5px;
+            &:hover{
+                text-decoration: underline;
+
+            }
+        }
+    }
+    .result-card{
+        
+    }
+}

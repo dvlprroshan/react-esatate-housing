@@ -43,7 +43,7 @@ const Section6 = () => {
                 {cardData.map((item, index) => (
                     <div className="card" key={index} >
                         <div className="card-img">
-                            <img src={`/assets/images/Section6/${item.id}.png`} />
+                            <img src={`/assets/images/section6/${item.id}.png`} />
                         </div>
                         <div className="card-content">
                             <div className="card-title">${item.title}</div>
